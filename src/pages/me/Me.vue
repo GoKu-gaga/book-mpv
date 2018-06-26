@@ -4,6 +4,7 @@
       <img :src="userinfo.avatarUrl" alt="">
       <p>{{userinfo.nickName}}</p>
     </div>
+    <!-- <button open-type="getUserInfo">a</button> -->
     <YearProgress></YearProgress>
 
     <button v-if="userinfo.openId" @click="scanBook" class="btn">添加图书</button>
