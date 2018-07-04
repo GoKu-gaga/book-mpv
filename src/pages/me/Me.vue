@@ -13,7 +13,7 @@
 <script>
 import qcloud from 'wafer2-client-sdk'
 import YearProgress from '@/components/YearProgress'
-import {showSuccess, post, showModal} from '@/util'
+import {showSuccess, post, showModel} from '@/util'
 import config from '@/config'
 
 export default {
@@ -35,7 +35,7 @@ export default {
         isbn,
         openid: this.userinfo.openId
       })
-      showModal('添加成功', `${res.title}添加成功`)
+      showModel('添加成功', `${res.title}添加成功`)
     },
 
     scanBook () {
