@@ -4,7 +4,8 @@
       评论
     </div>
     <div class="comment"
-        v-for="comment in comments" 
+        v-for="comment in comments"
+        @click="handleClick(comment)"
         :key="comment.id">
       <div class="user">
         <div class="inline">
@@ -31,7 +32,16 @@
 
 <script>
 export default {
-  props: ['comments']
+  props: ['comments', 'type'],
+  methods: {
+    handleClick (comment) {
+      if (this.type === 'user') {
+        wx.navigateTo({
+          url: '/pages/detail/main?id=' + comment.bookid
+        })
+      }
+    }
+  }
 }
 </script>
 
